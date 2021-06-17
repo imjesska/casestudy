@@ -26,10 +26,6 @@ public class AdminPagesController {
     @Autowired
     private PageRepository pageRepo;
 
-    // public AdminPagesController(PageRepository pageRepo) {
-    //     this.pageRepo = pageRepo;
-    // }
-
     @GetMapping
     public String index(Model model) {
 
@@ -51,11 +47,11 @@ public class AdminPagesController {
     @PostMapping("/add")
     public String add(@Valid Page page, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model) {
 
-        if (bindingResult.hasErrors()) {
+        if (bindingResult.hasErrors()) {    //return view with errors
             return "admin/pages/add";
         }
 
-        redirectAttributes.addFlashAttribute("message", "Page added");
+        redirectAttributes.addFlashAttribute("message", "Page added");  //feedback notification
         redirectAttributes.addFlashAttribute("alertClass", "alert-success");
 
         String slug = page.getSlug() == "" ? page.getTitle().toLowerCase().replace(" ", "-") : page.getSlug().toLowerCase().replace(" ", "-");
@@ -101,10 +97,12 @@ public class AdminPagesController {
         redirectAttributes.addFlashAttribute("message", "Page edited");
         redirectAttributes.addFlashAttribute("alertClass", "alert-success");
 
+        //if slug isn't provided then it'll be made from title
         String slug = page.getSlug() == "" ? page.getTitle().toLowerCase().replace(" ", "-") : page.getSlug().toLowerCase().replace(" ", "-");
 
         Page slugExists = pageRepo.findBySlugAndIdNot(slug, page.getId());
 
+       //if it already exists, notify user, can't have two of the same url
         if ( slugExists != null ) {
             redirectAttributes.addFlashAttribute("message", "Slug exists, choose another");
             redirectAttributes.addFlashAttribute("alertClass", "alert-danger");
@@ -138,7 +136,7 @@ public class AdminPagesController {
         Page page;
 
         for (int pageId : id) {
-            page = pageRepo.getOne(pageId);
+            page = pageRepo.getById(pageId);
             page.setSorting(count);
             pageRepo.save(page);
             count++;

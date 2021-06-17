@@ -9,10 +9,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PageRepository extends JpaRepository<Page, Integer> {
 
+    //Spring checks to find anything named slug
     Page findBySlug(String slug);
-
-    // @Query("SELECT p FROM Page p WHERE p.id != :id and p.slug = :slug")
-    // Page findBySlug(int id, String slug);
 
     Page findBySlugAndIdNot(String slug, int id);
 

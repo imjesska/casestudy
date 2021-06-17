@@ -5,7 +5,7 @@ import java.util.HashMap;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import com.customterrarium.dao.Cart;
+import com.customterrarium.models.Cart;
 import com.customterrarium.dao.ProductRepository;
 import com.customterrarium.models.Product;
 import org.springframework.beans.factory.annotation.Autowired;
