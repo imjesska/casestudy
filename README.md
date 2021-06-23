@@ -2,13 +2,18 @@
 
 # Per Scholas Case Study
 
-###### Project Summary: Build an application using Spring Boot
+#### Project Summary: Build an application using Spring Boot
 
 **Work Flow**
->Have at least 4 models
->Have DAO that are composed of one or more functions and have direct access to the database
->Use HTML for static and dynamic pages and markup the structure of every page
->Use CSS to style HTML pages
+>-Have at least 4 models
+>
+>-Have DAO that are composed of one or more functions and have direct access to the database
+>
+>-Use HTML for static and dynamic pages and markup the structure of every page
+>
+>-Use CSS to style HTML pages
+
+![Alt text](https://raw.githubusercontent.com/imjesska/casestudy/main/casestudyDiagram.png "User Story Diagram")
 
 **Website Concepts:**
 
@@ -28,4 +33,4 @@
 * [x] Used BCrypt to hash passwords
 * [x] Used Bootstrap and Thymeleaf
 
-![Alt text](https://raw.githubusercontent.com/imjesska/casestudy/main/casestudyDiagram.png "User Story Diagram")
+
