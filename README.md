@@ -33,6 +33,6 @@
 * [x] Used BCrypt to hash passwords
 * [x] Used Lombok
 * [x] Used Bootstrap and Thymeleaf 
-* [x] Referred to StackOverflow and previous group SMS project for guidance
+* [x] Referred to StackOverflow and previous group SMS exercise for guidance
 
 
