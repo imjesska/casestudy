@@ -2,30 +2,29 @@
 
 # Per Scholas Case Study
 
-###### Project Summary: Building a Spring MVC based application using Spring Boot
+###### Project Summary: Build an application using Spring Boot
 
 **Work Flow**
 >Have at least 4 models
->
->Implement JUnit testing on DAO
->
->
->
->
+>Have DAO that are composed of one or more functions and have direct access to the database
+>Use HTML for static and dynamic pages and markup the structure of every page
+>Use CSS to style HTML pages
+
 
 **Website Concepts:**
 
->-This pseudo-website is for my friend that sells her crafts as a side-gig. 
+>-This pseudo-website is for my friend that sells her crafts as a side-gig
 >
->-A way for users to purchase products
+>-Registration/Login requests made by the user
 >
->-A way for users to get feedback from the owner about their product
+>-Admin can create, update, delete pages, categories, and products
 >
->-
+>-A cart that can hold products to be purchased
 >
->-
+>-Implement a sandbox payment system for a way for users to purchase products
 
 **Notes/Comments:**
 
-* [x] Needs a lot of work still
-* [x] 
+* [x] Needs commenting and tests for DAO
+* [x] Used BCrypt to encrypt passwords
+* [x] Used Bootstrap and Thymeleaf
