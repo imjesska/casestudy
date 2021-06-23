@@ -13,7 +13,7 @@
 >
 >-Use CSS to style HTML pages
 
-![Alt text](https://raw.githubusercontent.com/imjesska/casestudy/main/casestudyDiagram.png "User Story Diagram")
+
 
 **Website Concepts:**
 
