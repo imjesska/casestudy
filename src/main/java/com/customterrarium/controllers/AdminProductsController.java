@@ -217,7 +217,7 @@ public class AdminProductsController {
         redirectAttributes.addFlashAttribute("message", "Product deleted");
         redirectAttributes.addFlashAttribute("alertClass", "alert-success");
 
-        return "redirect:/admin/products";
+        return "redirect:/admin/products/";
         
     }
 

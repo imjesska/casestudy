@@ -73,7 +73,7 @@ public class AdminCategoriesController {
     @GetMapping("/edit/{id}")
     public String edit(@PathVariable int id, Model model) {
 
-        Category category = categoryRepo.getOne(id);
+        Category category = categoryRepo.getById(id);
 
         model.addAttribute("category", category);
 
@@ -84,7 +84,7 @@ public class AdminCategoriesController {
     @PostMapping("/edit")
     public String edit(@Valid Category category, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model) {
 
-        Category categoryCurrent = categoryRepo.getOne(category.getId());
+        Category categoryCurrent = categoryRepo.getById(category.getId());
 
         if (bindingResult.hasErrors()) {
             model.addAttribute("categoryName", categoryCurrent.getName());

@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
-import lombok.Data;
+import lombok.*;
 
 @Entity
 @Table(name="pages")

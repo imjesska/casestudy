@@ -69,7 +69,7 @@ public class CartController {
     @GetMapping("/subtract/{id}")
     public String subtract(@PathVariable int id, HttpSession session, Model model, HttpServletRequest httpServletRequest) {
 
-        Product product = productRepo.getOne(id);
+        Product product = productRepo.getById(id);
 
         HashMap<Integer, Cart> cart = (HashMap<Integer, Cart>) session.getAttribute("cart");
 

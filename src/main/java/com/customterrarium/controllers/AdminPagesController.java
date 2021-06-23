@@ -54,7 +54,7 @@ public class AdminPagesController {
         redirectAttributes.addFlashAttribute("message", "Page added");  //feedback notification
         redirectAttributes.addFlashAttribute("alertClass", "alert-success");
 
-        String slug = page.getSlug() == "" ? page.getTitle().toLowerCase().replace(" ", "-") : page.getSlug().toLowerCase().replace(" ", "-");
+        String slug = page.getSlug().equals("") ? page.getTitle().toLowerCase().replace(" ", "-") : page.getSlug().toLowerCase().replace(" ", "-");
 
         Page slugExists = pageRepo.findBySlug(slug);
 
@@ -76,7 +76,7 @@ public class AdminPagesController {
     @GetMapping("/edit/{id}")
     public String edit(@PathVariable int id, Model model) {
 
-        Page page = pageRepo.getOne(id);
+        Page page = pageRepo.getById(id);
 
         model.addAttribute("page", page);
 
@@ -87,7 +87,7 @@ public class AdminPagesController {
     @PostMapping("/edit")
     public String edit(@Valid Page page, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model) {
 
-        Page pageCurrent = pageRepo.getOne(page.getId());
+        Page pageCurrent = pageRepo.getById(page.getId());
 
         if (bindingResult.hasErrors()) {
             model.addAttribute("pageTitle", pageCurrent.getTitle());
@@ -97,8 +97,8 @@ public class AdminPagesController {
         redirectAttributes.addFlashAttribute("message", "Page edited");
         redirectAttributes.addFlashAttribute("alertClass", "alert-success");
 
-        //if slug isn't provided then it'll be made from title
-        String slug = page.getSlug() == "" ? page.getTitle().toLowerCase().replace(" ", "-") : page.getSlug().toLowerCase().replace(" ", "-");
+        //if slug isn't provided then it'll be made from title with hyphens
+        String slug = page.getSlug().equals("") ? page.getTitle().toLowerCase().replace(" ", "-") : page.getSlug().toLowerCase().replace(" ", "-");
 
         Page slugExists = pageRepo.findBySlugAndIdNot(slug, page.getId());
 
