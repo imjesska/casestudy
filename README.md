@@ -10,7 +10,6 @@
 >Use HTML for static and dynamic pages and markup the structure of every page
 >Use CSS to style HTML pages
 
-
 **Website Concepts:**
 
 >-This pseudo-website is for my friend that sells her crafts as a side-gig
@@ -28,3 +27,5 @@
 * [x] Needs commenting and tests for DAO
 * [x] Used BCrypt to encrypt passwords
 * [x] Used Bootstrap and Thymeleaf
+
+![Alt text](https://raw.githubusercontent.com/imjesska/casestudy/main/casestudyDiagram.png "User Story Diagram")
