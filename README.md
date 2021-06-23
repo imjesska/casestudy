@@ -25,7 +25,7 @@
 **Notes/Comments:**
 
 * [x] Needs commenting and tests for DAO
-* [x] Used BCrypt to encrypt passwords
+* [x] Used BCrypt to hash passwords
 * [x] Used Bootstrap and Thymeleaf
 
 ![Alt text](https://raw.githubusercontent.com/imjesska/casestudy/main/casestudyDiagram.png "User Story Diagram")
